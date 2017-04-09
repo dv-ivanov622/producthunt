@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "ru.dmitriyivanov.producthunt"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:recyclerview-v7:+'
+    // Данную либу использую для работы с RESTApi
+    // http://square.github.io/retrofit/
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    // Данную либу использую для скачивания изображений и отображения в ImageView
+    // http://square.github.io/picasso/
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    // Используем объектно-событийную систему
+    // https://github.com/greenrobot/EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+}

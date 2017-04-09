@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/product_item_height"
+    android:layout_marginTop="5dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+    <!--Thumb-->
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/productImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/product_view_padding"
+        android:paddingTop="@dimen/product_view_padding">
+        <!--Title-->
+        <TextView
+            android:id="@+id/productTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/ProductTitleAppearance"
+            android:maxLines="1"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="Test"/>
+
+        <!--Description-->
+        <TextView
+            android:id="@+id/productDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/ProductDescriptionAppearance"
+            android:text="dasdasdasdadasdasdasdasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
+            android:maxLines="2"
+            android:lines="2"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/product_view_padding"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/productVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"/>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/vote_ic"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
