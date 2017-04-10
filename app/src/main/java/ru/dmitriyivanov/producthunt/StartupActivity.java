@@ -89,7 +89,7 @@ public class StartupActivity extends AppCompatActivity implements UI {
     private Runnable refreshTask = new Runnable() {
         public void run() {
             if(mActualPosts != null && mActualPosts.size() > 0) {
-                final Post lastVisible = mActualPosts.get(2);
+                final Post lastVisible = mActualPosts.get(0);
                 // Скачиваем новый посты
                 Call<PostList> call = mApiService.getPostsByCategoryName(currentCategory.slug);
                 call.enqueue(new Callback<PostList>() {
